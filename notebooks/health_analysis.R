@@ -4,7 +4,7 @@ library(caret)
 # INSTRUCTIONS: modify the data folders so you can read data and write the results.
 
 # 1. Load the data stored in your preferred data storage provider (e.g. Dropbox or Google Drive)
-data <- read_csv("data/health/heart_disease.csv")
+data <- read_csv("~/work/health-data/heart_disease.csv")
 
 # 2. Basic preprocessing
 # Target 'num' is the diameter narrowing (0 = healthy, 1-4 = disease)
@@ -23,13 +23,13 @@ model <- train(target ~ age + sex + cp + trestbps + chol,
                na.action = na.omit)
 
 # 4. Save results
-dir.create("outputs/health", recursive = TRUE, showWarnings = FALSE)
-sink("outputs/health/model_summary.txt")
+dir.create("~/work/health-data/outputs/health", recursive = TRUE, showWarnings = FALSE)
+sink("~/work/health-data/model_summary.txt")
 print(summary(model))
 sink()
 
 # Save a variable importance plot
-png("outputs/health/feature_importance.png")
+png("~/work/health-data/feature_importance.png")
 plot(varImp(model), main="Key Diagnostic Factors")
 dev.off()
 
