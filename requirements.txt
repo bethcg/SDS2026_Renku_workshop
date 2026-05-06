@@ -5,19 +5,21 @@ plotly
 matplotlib
 seaborn
 
-# --- Thread 1: Energy forecasting (Renku dashboards) ---
+# --- Exercise 1: Energy Consumption ---
 streamlit
 
-# --- Thread 2: Health (Python equivalent) ---
+# --- Exercise 2: Health (Python equivalent) ---
 # Note: R packages are handled via renv.lock, 
 # but if using Python for this thread:
 scikit-learn
+ucimlrepo
+pandas
 
-# --- Thread 3: Computer vision ---
+# --- Exercise 3: Computer vision ---
 torch
 torchvision
 pillow
 
-# --- Thread 4: Generative AI ---
+# --- Exercise 4: Generative AI ---
 transformers
 sentencepiece
