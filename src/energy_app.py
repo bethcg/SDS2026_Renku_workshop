@@ -5,7 +5,7 @@ import os
 
 st.set_page_config(page_title="Energy Demand Dashboard", layout="wide")
 
-st.title("⚡ GEO4CIVHIC Demo Sites: Energy demand")
+st.title("⚡ GEO4CIVHIC demo sites: Energy demand")
 st.markdown("This dashboard visualizes annual load profiles from the Renku-connected dataset stemming from Zenodo.")
 
 
