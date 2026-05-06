@@ -9,40 +9,29 @@
     ]
   },
   "Packages": {
+    "Matrix": {
+      "Package": "Matrix",
+      "Version": "1.6-1",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
     "tidyverse": {
       "Package": "tidyverse",
       "Version": "2.0.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "c331908b8989f579172081d48c08ec21"
+      "Repository": "CRAN"
     },
     "caret": {
       "Package": "caret",
       "Version": "6.0-94",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "f86641b9d40b4352296d93427181048b"
+      "Repository": "CRAN"
     },
     "finalfit": {
       "Package": "finalfit",
       "Version": "1.0.6",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "70686940a498b8c2c62c3e1079361667"
-    },
-    "readr": {
-      "Package": "readr",
-      "Version": "2.1.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "46903d8d641a9420042f9d854a5e3057"
-    },
-    "ggplot2": {
-      "Package": "ggplot2",
-      "Version": "3.4.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "270381e4c5b706c88f1589d701a52b31"
+      "Repository": "CRAN"
     }
   }
 }
