@@ -1,23 +1,23 @@
-# Use a minimal Jupyter base image with Python 3.10+
+# Use the official Jupyter base image
 FROM jupyter/base-notebook:python-3.11
 
-# Set labels for Renku compatibility (optional but recommended)
-LABEL maintainer="Renku Workshop"
-
 USER root
-# Install git so Renku can track changes inside the container
+
+# Install git for Renku lineage tracking
 RUN apt-get update && apt-get install -y git && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 USER ${NB_USER}
 
-# Install only the absolute essentials for the GenAI thread
-RUN pip install --no-cache-dir \
-    torch --index-url https://download.pytorch.org/whl/cpu \
+# 1. Use Mamba (standard in Jupyter images) to install essentials. 
+# This is much faster and more reliable than pip in this specific base image.
+RUN mamba install -y --quiet \
+    pytorch-cpu \
     transformers \
-    sentencepiece
+    sentencepiece \
+    -c pytorch -c huggingface -c conda-forge
 
-# Pre-cache the flan-t5-small model weights
-# This is the "Generative AI setup" part: baking the model into the image
+# 2. Pre-cache the model weights
+# We use the 'transformers' library to download the model into the container layers
 RUN python3 -c "from transformers import pipeline; pipeline('summarization', model='google/flan-t5-small')"
 
 # Set the working directory
