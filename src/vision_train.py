@@ -6,8 +6,8 @@ from torch.utils.data import DataLoader
 import os
 
 # Path to the unzipped ASCE folder
-DATA_DIR = 'data/chest_xray_unzipped/ASCE_Enhanced_Renamed'
-OUTPUT_DIR = 'outputs/models'
+DATA_DIR = '/home/renku/work/data/ASCE_Enhanced_Renamed'
+OUTPUT_DIR = '/home/renku/work/data/outputs/models'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def train_asce_model():
