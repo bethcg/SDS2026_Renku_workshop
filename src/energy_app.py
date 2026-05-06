@@ -12,7 +12,7 @@ st.markdown("This dashboard visualizes annual load profiles from the Renku-conne
 # 1. Path Management
 # Update your data path accourding to the mount point in your project
 # https://zenodo.org/records/10568762
-DATA_PATH = 'data/energy/Energy demand_GEO4CIVHIC demo sites.xlsx'
+DATA_PATH = '/home/renku/work/energy-demand-of-geo4civhic-de-doi-10.5281-zenodo.10568762/Energy demand_GEO4CIVHIC demo sites.xlsx'
 
 @st.cache_data
 def load_data(path):
@@ -35,7 +35,7 @@ df = load_data(DATA_PATH)
 
 if df is not None:
     # 3. Sidebar Filters
-    st.sidebar.header("Filter Options")
+    st.sidebar.header("Filter options")
     
     # Allow users to view a specific month or the full year
     month = st.sidebar.select_slider(
